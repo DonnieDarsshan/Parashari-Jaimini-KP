@@ -10589,6 +10589,10 @@ document.addEventListener("DOMContentLoaded", () => {
      ========================================================= -->
 <hr>
 
+
+
+
+
 <style>
 /* =========================================================
    JAIMINI ARUDA PADDATHI STYLES (TABLE 8)
@@ -10597,9 +10601,9 @@ document.addEventListener("DOMContentLoaded", () => {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
-  width: 820px;
+  width: 840px;
   max-width: 96vw;
-  height: 520px;
+  height: 560px;
   background: var(--panel);
   border: 2px solid var(--border);
   box-shadow: 0 0 26px rgba(16, 185, 129, .55);
@@ -10611,7 +10615,7 @@ document.addEventListener("DOMContentLoaded", () => {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
   width: 100%;
-  height: 530px;
+  height: 540px;
   background: var(--panel);
   border: 2px solid var(--border);
   box-shadow: 0 0 20px rgba(16, 185, 129, .45);
@@ -10620,9 +10624,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 .jmCell {
   border: 1px solid var(--soft);
-  padding: 7px 9px;
+  padding: 8px 12px;
   position: relative;
-  font-size: 13px;
   background: #021b16;
   cursor: pointer;
   overflow: hidden;
@@ -10669,23 +10672,23 @@ document.addEventListener("DOMContentLoaded", () => {
   align-items: center;
   justify-content: center;
   border: 1px solid var(--soft);
-  padding: 12px;
+  padding: 14px;
   text-align: center;
 }
 
 .jmTitle {
   color: #10b981;
-  font-weight: 900;
-  font-size: 19px;
+  font-weight: 800;
+  font-size: 22px;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
 
 .jmSubtitle {
-  color: #d4af37;
-  font-weight: 800;
-  font-size: 12.5px;
-  margin-top: 4px;
+  color: #facc15;
+  font-weight: 600;
+  font-size: 14.5px;
+  margin-top: 6px;
 }
 
 .jmTopRow {
@@ -10694,56 +10697,62 @@ document.addEventListener("DOMContentLoaded", () => {
   align-items: flex-start;
   width: 100%;
   margin-bottom: 4px;
+  padding: 0 2px;
+  gap: 6px;
   z-index: 2;
 }
 
+/* Bigger House Numbers */
 .jmHouse {
-  font-size: 13.5px;
-  font-weight: 900;
-  color: #fef3c7;
+  font-family: 'Calibri', 'Segoe UI', Arial, sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #facc15;
+  line-height: 1;
+}
+
+#jaiminiD1Kundali .jmHouse {
+  font-size: 25px;
 }
 
 .jmArudhaWrap {
   display: flex;
   flex-wrap: wrap;
-  gap: 3px;
+  gap: 5px;
   justify-content: flex-end;
-  max-width: 85%;
+  max-width: 82%;
 }
 
-/* Default Arudha Badge (D9 & D10) */
+/* All Arudha Badges (A2-A11) — Yellow Text & Much Larger */
 .arudhaBadge {
-  font-size: 11px;
-  font-weight: 900;
-  padding: 1px 5px;
+  font-family: 'Calibri', 'Segoe UI', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 3px 8px;
   border-radius: 4px;
-  background: rgba(16, 185, 129, 0.15);
-  border: 1px solid #10b981;
-  color: #34d399;
-  white-space: nowrap;
-}
-
-/* Larger Arudha Badges specifically inside D1 Kundali */
-#jaiminiD1Kundali .arudhaBadge {
-  font-size: 13px;
-  padding: 1.5px 7px;
-  border-radius: 5px;
-  border-width: 1.5px;
-  letter-spacing: 0.3px;
-}
-
-.arudhaBadge.alBadge {
-  background: linear-gradient(135deg, #b45309, #78350f);
+  background: rgba(250, 204, 21, 0.12);
   border: 1px solid #facc15;
-  color: #fef08a;
-  box-shadow: 0 0 8px rgba(250, 204, 21, 0.45);
+  color: #facc15 !important;
+  white-space: nowrap;
+  letter-spacing: 0.4px;
+  line-height: 1.15;
 }
 
+/* Even Larger Arudha Badges specifically inside D1 Kundali */
+#jaiminiD1Kundali .arudhaBadge {
+  font-size: 18px;
+  padding: 3px 9px;
+  border-radius: 5px;
+  color: #facc15 !important;
+}
+
+/* Dark Red Background for AL and UL (No Orange/Pink) */
+.arudhaBadge.alBadge,
 .arudhaBadge.ulBadge {
-  background: linear-gradient(135deg, #be185d, #831843);
-  border: 1px solid #f472b6;
-  color: #fce7f3;
-  box-shadow: 0 0 8px rgba(244, 114, 182, 0.45);
+  background: linear-gradient(135deg, #6b0000, #2b0000) !important;
+  border: 1.5px solid #facc15 !important;
+  color: #facc15 !important;
+  box-shadow: 0 0 8px rgba(139, 0, 0, 0.75);
 }
 
 /* 2-Row Large Arudha Legend Strip under D1 */
@@ -10770,12 +10779,13 @@ document.addEventListener("DOMContentLoaded", () => {
   padding: 8px 12px;
   border: 1px solid rgba(16, 185, 129, 0.45);
   border-radius: 6px;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .arudhaLegendCard .arudhaBadge {
-  font-size: 13.5px;
-  padding: 2px 8px;
+  font-size: 16.5px;
+  padding: 2.5px 9px;
+  color: #facc15 !important;
 }
 
 /* 1-Row Chara Karaka Legend Strip under D1 */
@@ -10802,21 +10812,44 @@ document.addEventListener("DOMContentLoaded", () => {
   align-items: center;
   justify-content: center;
   background: #021b16;
-  padding: 7px 8px;
+  padding: 8px 10px;
   border: 1px solid rgba(56, 189, 248, 0.4);
   border-radius: 6px;
   min-width: 115px;
   text-align: center;
 }
 
+/* Planet List — Centered Horizontally & Vertically, Lighter Clean Font */
 .jmList {
   display: flex;
   flex-direction: column;
-  gap: 2px;
-  font-size: 12.5px;
-  font-weight: 700;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex: 1;
+  width: 100%;
+  gap: 3px;
+  font-family: 'Calibri', 'Inter', 'Segoe UI', Arial, sans-serif;
+  font-size: 17.5px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  line-height: 1.22;
+  padding: 2px 4px;
   white-space: nowrap;
   z-index: 2;
+}
+
+/* Slightly larger planet text inside D1 Kundali */
+#jaiminiD1Kundali .jmList {
+  font-size: 18.5px;
+  font-weight: 500;
+  gap: 3.5px;
+}
+
+/* Prevent Lagna text inside Jaimini Kundali from looking overly fat */
+.jmList .lagnaText {
+  color: #facc15;
+  font-weight: 600 !important;
 }
 
 .charaSym {
@@ -10830,11 +10863,12 @@ document.addEventListener("DOMContentLoaded", () => {
   content: attr(data-sym);
 }
 
+/* Karaka Tags ([AmK], etc.) perfectly match the planet font size with Bright Teal */
 .karakaTag {
-  color: #38bdf8;
-  font-size: 11px;
-  font-weight: 900;
-  margin-left: 4px;
+  color: #00e6e6; /* Bright Teal */
+  font-size: 1em; /* Scales perfectly to exactly match the planet text size */
+  font-weight: 600;
+  margin-left: 6px;
 }
 
 .charaGridRow {
@@ -10847,6 +10881,8 @@ document.addEventListener("DOMContentLoaded", () => {
 }
 </style>
 
+
+
 <h2 id="table8" style="text-align:center; cursor:pointer;" onclick="toggleJaiminiTable()">
   TABLE 8 : JAIMINI ARUDA PADDATHI
 </h2>
@@ -10856,7 +10892,7 @@ document.addEventListener("DOMContentLoaded", () => {
   <!-- JAIMINI CONTROLS & SUMMARY BAR -->
   <div class="pivotBar" style="margin-top:14px; margin-bottom:20px; justify-content:center; gap:18px;">
     <label style="color:#facc15; font-size:14px;">
-      <input type="checkbox" id="jaiminiDualLordToggle" checked onchange="buildJaiminiSystem()">
+      <input type="checkbox" id="jaiminiDualLordToggle" onchange="buildJaiminiSystem()">
       Dual Lordship (Scorpio: Ma/Ke | Aquarius: Sa/Ra)
     </label>
     <label style="color:#34d399; font-size:14px;">
@@ -10978,10 +11014,11 @@ const JM_ENTITY_LIST = [
   "Jupiter","Saturn","Budha","Ketu","Venus"
 ];
 
+// STATE CONTROLLER (Tracks Custom Click-to-Count House)
 window.__jmChartState = {
-  jaiminiD1Kundali:  { activeAspectSign: null, selectedSigns: new Set() },
-  jaiminiD9Kundali:  { activeAspectSign: null, selectedSigns: new Set() },
-  jaiminiD10Kundali: { activeAspectSign: null, selectedSigns: new Set() }
+  jaiminiD1Kundali:  { activeAspectSign: null, selectedSigns: new Set(), customHouse1: null, originalLagnaIdx: 0 },
+  jaiminiD9Kundali:  { activeAspectSign: null, selectedSigns: new Set(), customHouse1: null, originalLagnaIdx: 0 },
+  jaiminiD10Kundali: { activeAspectSign: null, selectedSigns: new Set(), customHouse1: null, originalLagnaIdx: 0 }
 };
 
 /* =========================================================
@@ -11033,6 +11070,43 @@ function applySingleChartHighlight(containerId) {
   });
 }
 
+// 🔥 CLICK-TO-COUNT RECALCULATION ENGINE
+function updateJaiminiHouseNumbers(containerId) {
+  const grid = document.getElementById(containerId);
+  if (!grid) return;
+  const state = window.__jmChartState[containerId];
+  if (!state) return;
+  
+  // Default to Original Lagna if nothing is clicked
+  let refSignIdx = state.originalLagnaIdx;
+  
+  if (state.customHouse1) {
+    refSignIdx = JM_ZODIAC.indexOf(state.customHouse1);
+  }
+
+  grid.querySelectorAll(".jmCell[data-sign]").forEach(cell => {
+    const s = cell.dataset.sign;
+    let sIdx = JM_ZODIAC.indexOf(s);
+    let houseNum = (sIdx - refSignIdx + 12) % 12 + 1;
+    
+    let houseEl = cell.querySelector(".jmHouse");
+    if (houseEl) {
+        houseEl.textContent = houseNum;
+        
+        if (state.customHouse1 && houseNum === 1) {
+            // Target Clicked House turns Bright Teal
+            houseEl.style.color = "#00e6e6"; 
+        } else if (state.customHouse1) {
+            // All other shifted houses turn Light Blue so you know it's shifted
+            houseEl.style.color = "#38bdf8"; 
+        } else {
+            // Unclicked (Back to Normal Lagna) reverts to standard CSS Gold
+            houseEl.style.color = ""; 
+        }
+    }
+  });
+}
+
 function refreshAllJaiminiHighlights() {
   ["jaiminiD1Kundali", "jaiminiD9Kundali", "jaiminiD10Kundali"].forEach(applySingleChartHighlight);
 }
@@ -11048,8 +11122,6 @@ function toggleJaiminiTable() {
 
 /* ---------------------------------------------------------
    1. PURE SIDEREAL & VARGA LONGITUDE ENGINE (D1, D9, D10)
-   Calculates true 0-360° Varga longitude first, then shifts
-   ALL 9 planets + ASC equally in KP (0°) / Vedic (15°) mode!
    --------------------------------------------------------- */
 function getPureSiderealAbs(entity) {
   let abs = getAbsDeg(entity);
@@ -11069,20 +11141,20 @@ function getTrueVargaAbs(siderealAbs, chartType) {
   let degInSign = siderealAbs % 30;
 
   if (chartType === "D9") {
-    const span = 30 / 9; // 3°20'
+    const span = 30 / 9; 
     let pada = Math.floor(degInSign / span);
     if (pada > 8) pada = 8;
-    let remDeg = ((degInSign - pada * span) / span) * 30; // 0–30° inside D9 sign
+    let remDeg = ((degInSign - pada * span) / span) * 30; 
     const startSigns = [0, 9, 6, 3];
     let d9SignIdx = (startSigns[rasiIdx % 4] + pada) % 12;
     return d9SignIdx * 30 + remDeg;
   }
 
   if (chartType === "D10") {
-    const span = 3; // 3°00'
+    const span = 3; 
     let part = Math.floor(degInSign / span);
     if (part > 9) part = 9;
-    let remDeg = ((degInSign - part * span) / span) * 30; // 0–30° inside D10 sign
+    let remDeg = ((degInSign - part * span) / span) * 30; 
     let isOddSign = (rasiIdx % 2 === 0);
     let startSign = isOddSign ? rasiIdx : (rasiIdx + 8) % 12;
     let d10SignIdx = (startSign + part) % 12;
@@ -11094,7 +11166,6 @@ function getTrueVargaAbs(siderealAbs, chartType) {
 
 function getChartOffsetForVarga(chartType) {
   const followGlobal = document.getElementById("jaiminiFollowGlobalMode")?.checked;
-  // Also apply if main KP or Vedic mode is active and user wants D1/D9/D10 synced
   const isKP = document.getElementById("kpMode")?.checked;
   const isVedic = document.getElementById("vedicMode")?.checked;
   const isSign2Sign = document.getElementById("sign2signMode")?.checked;
@@ -11141,7 +11212,7 @@ function getJaiminiRawAbs(entity, forceSidereal = false) {
 }
 
 /* ---------------------------------------------------------
-   2. CHARA KARAKA CALCULATOR (LOCKED TO ORIGINAL SIDEREAL DEGREES)
+   2. CHARA KARAKA CALCULATOR 
    --------------------------------------------------------- */
 function computeCharaKarakas() {
   const includeRahu = document.getElementById("jaimini8KarakaMode")?.checked;
@@ -11187,7 +11258,7 @@ function computeCharaKarakas() {
 }
 
 /* ---------------------------------------------------------
-   3. DIVISIONAL CHART SIGN CALCULATORS (D1, D9, D10)
+   3. DIVISIONAL CHART SIGN CALCULATORS 
    --------------------------------------------------------- */
 function getD1SignIndex(abs) {
   return Math.floor(((abs % 360) + 360) % 360 / 30) % 12;
@@ -11202,7 +11273,7 @@ function getD10SignIndex(abs) {
 }
 
 /* ---------------------------------------------------------
-   4. JAIMINI DUAL LORDSHIP STRENGTH RESOLVER (K.N. RAO RULE)
+   4. JAIMINI DUAL LORDSHIP STRENGTH RESOLVER 
    --------------------------------------------------------- */
 function getJaiminiSignOccupantsMap(signFn = getD1SignIndex, forceSidereal = false) {
   let occ = Array.from({length: 12}, () => []);
@@ -11249,7 +11320,7 @@ function getJaiminiLordOfSign(signIdx, signFn = getD1SignIndex, forceSidereal = 
 }
 
 /* ---------------------------------------------------------
-   5. ARUDHA PADA CALCULATOR (D1, D9, AND D10)
+   5. ARUDHA PADA CALCULATOR 
    --------------------------------------------------------- */
 function computeAllArudhas(signFn = getD1SignIndex, chartType = "D1") {
   const followGlobal = document.getElementById("jaiminiFollowGlobalMode")?.checked;
@@ -11297,9 +11368,7 @@ function computeAllArudhas(signFn = getD1SignIndex, chartType = "D1") {
 }
 
 /* ---------------------------------------------------------
-   6. RENDER SOUTH INDIAN KUNDALI (D1 / D9 / D10)
-   In KP/Vedic mode, D9 & D10 shift all 9 planets + ASC equally
-   by the exact same degree offset across 30° equal houses!
+   6. RENDER SOUTH INDIAN KUNDALI
    --------------------------------------------------------- */
 function renderJaiminiChart(containerId, chartType, titleText, subtitleText, arudhaData, karakaMap) {
   const grid = document.getElementById(containerId);
@@ -11318,22 +11387,24 @@ function renderJaiminiChart(containerId, chartType, titleText, subtitleText, aru
   let pivotSid = getPureSiderealAbs(pivotEntity) ?? getPureSiderealAbs("Lagna");
   if (pivotSid === null) return;
 
-  // Equal offset in this specific Varga chart (0° for KP, 15° for Vedic when Follow Mode is checked)
   let vargaOffset = followGlobal ? getChartOffsetForVarga(chartType) : 0;
-
   let pivotVargaShifted = ((getTrueVargaAbs(pivotSid, chartType) + vargaOffset) % 360 + 360) % 360;
   let baseLagnaSignIdx = Math.floor(pivotVargaShifted / 30) % 12;
 
+  // Track the original lagna for the click-to-count feature reset
+  if (window.__jmChartState[containerId]) {
+    window.__jmChartState[containerId].originalLagnaIdx = baseLagnaSignIdx;
+    window.__jmChartState[containerId].customHouse1 = null; 
+  }
+
   let buckets = {};
   JM_ZODIAC.forEach(s => buckets[s] = []);
-
   const showKarakas = document.getElementById("jaiminiShowKarakas")?.checked;
 
   JM_ENTITY_LIST.forEach(ent => {
     let sidAbs = getPureSiderealAbs(ent);
     if (sidAbs === null) return;
 
-    // 1. Compute true Varga longitude (0-360°), then shift equally by vargaOffset!
     let trueVargaAbs = getTrueVargaAbs(sidAbs, chartType);
     let shiftedVargaAbs = parseFloat((((trueVargaAbs + vargaOffset) % 360 + 360) % 360).toFixed(6));
 
@@ -11388,6 +11459,13 @@ function renderJaiminiChart(containerId, chartType, titleText, subtitleText, aru
       const state = window.__jmChartState[containerId];
       if (!state) return;
 
+      // 🔥 UNCLICK LOGIC: If same house is clicked, reset to normal (null)
+      if (state.customHouse1 === sign) {
+        state.customHouse1 = null; 
+      } else {
+        state.customHouse1 = sign;
+      }
+
       const rasiAspectOn = document.getElementById("jaiminiRasiAspectsMode")?.checked;
       if (rasiAspectOn) {
         state.activeAspectSign = (state.activeAspectSign === sign) ? null : sign;
@@ -11398,7 +11476,9 @@ function renderJaiminiChart(containerId, chartType, titleText, subtitleText, aru
           state.selectedSigns.add(sign);
         }
       }
+      
       applySingleChartHighlight(containerId);
+      updateJaiminiHouseNumbers(containerId); // Recalculate and colorize shifted houses
     });
 
     let signIdx = JM_ZODIAC.indexOf(sign);
@@ -11461,7 +11541,7 @@ function renderJaiminiChart(containerId, chartType, titleText, subtitleText, aru
 }
 
 /* ---------------------------------------------------------
-   7. JAIMINI CHARA DASHA ENGINE (PERMANENT RUNNING SYMBOLS)
+   7. JAIMINI CHARA DASHA ENGINE 
    --------------------------------------------------------- */
 const CHARA_SAVYA_GROUP = new Set([0, 1, 2, 6, 7, 8]);
 
@@ -11471,7 +11551,27 @@ function isSignSavya(signIdx) {
 }
 
 function getCharaDashaYears(signIdx) {
-  let lord = getJaiminiLordOfSign(signIdx, getD1SignIndex, true);
+  const signName = JM_ZODIAC[signIdx];
+  let lord = SIGN_LORDS[signName];
+
+  // K.N. Rao Chara Dasha ONLY: Always evaluate co-lords for Scorpio (Ma/Ke) & Aquarius (Sa/Ra)
+  // without touching the global Dual Lordship checkbox used by A1-A12 Arudhas
+  if (signName === "Scorpio") {
+    let absMa = getPureSiderealAbs("Mangala");
+    let absKe = getPureSiderealAbs("Ketu");
+    if (absMa !== null && absKe !== null && Math.floor(absMa / 30) === 7 && Math.floor(absKe / 30) === 7) {
+      return 12;
+    }
+    lord = resolveStrongerCoLord(signIdx, "Mangala", "Ketu", getD1SignIndex, true);
+  } else if (signName === "Aquarius") {
+    let absSa = getPureSiderealAbs("Saturn");
+    let absRa = getPureSiderealAbs("Rahu");
+    if (absSa !== null && absRa !== null && Math.floor(absSa / 30) === 10 && Math.floor(absRa / 30) === 10) {
+      return 12;
+    }
+    lord = resolveStrongerCoLord(signIdx, "Saturn", "Rahu", getD1SignIndex, true);
+  }
+
   let lordAbs = getPureSiderealAbs(lord);
   if (lordAbs === null) return 1;
 
@@ -11523,8 +11623,6 @@ function updateCharaDateFormatOnly() {
   highlightCurrentRunningCharaSymbols();
 }
 
-
-
 function highlightCurrentRunningCharaSymbols() {
   const box = document.getElementById("jaiminiCharaDashaBox");
   if (!box) return;
@@ -11547,13 +11645,11 @@ function highlightCurrentRunningCharaSymbols() {
 }
 
 function getValidCharaBirthDate() {
-  // 1. Primary: Active BTR timestamp
   if (window.__btrReady && window.__btrCurrentTime instanceof Date && !isNaN(window.__btrCurrentTime.getTime())) {
     window.__lastValidCharaBirth = new Date(window.__btrCurrentTime.getTime());
     return window.__lastValidCharaBirth;
   }
 
-  // 2. Secondary: BTR or Cloud Fetcher Date/Time inputs
   let y = parseInt(document.getElementById("btr_yyyy")?.value || document.getElementById("onYear")?.value, 10);
   let m = parseInt(document.getElementById("btr_mm")?.value || document.getElementById("onMonth")?.value, 10) - 1;
   let d = parseInt(document.getElementById("btr_dd")?.value || document.getElementById("onDay")?.value, 10);
@@ -11569,7 +11665,6 @@ function getValidCharaBirthDate() {
     }
   }
 
-  // 3. Tertiary: Swiss JSON meta
   if (window.__lastSwissData?.meta?.date) {
     let parts = window.__lastSwissData.meta.date.split("-");
     let tParts = (window.__lastSwissData.meta.time || "00:00:00").split(":");
@@ -11581,7 +11676,6 @@ function getValidCharaBirthDate() {
       }
     }
   }
-
   return window.__lastValidCharaBirth || null;
 }
 
@@ -11601,7 +11695,7 @@ function buildJaiminiCharaDasha() {
   currentOpenCharaMaha = null;
   currentOpenCharaBukthi = null;
 
-  const MS_YEAR = 365.2421904 * 24 * 60 * 60 * 1000;
+  const MS_YEAR = 365.256363 * 24 * 60 * 60 * 1000;
   const useKN = document.getElementById("charaModeKN")?.checked;
   const nowMs = Date.now();
 
@@ -11636,7 +11730,6 @@ function buildJaiminiCharaDasha() {
 
       let mahaStartMonths = cumulativeMonths;
       let mahaEndMonths   = cumulativeMonths + mahaMonths;
-
       let isRunningMaha = (nowMs >= mahaStart.getTime() && nowMs < mahaEnd.getTime());
 
       let mahaRow = document.createElement("div");
@@ -11824,9 +11917,6 @@ function buildJaiminiCharaDasha() {
   highlightCurrentRunningCharaSymbols();
 }
 
-
-
-
 function setTodayCharaDate() {
   const inp = document.getElementById("charaFindDate");
   if (!inp) return;
@@ -11974,8 +12064,6 @@ function buildJaiminiSystem() {
   });
 })();
 </script>
-
-
 
 
 </body>
